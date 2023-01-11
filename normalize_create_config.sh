@@ -12,6 +12,6 @@ tmp=${vcf#*_}
 s_id=${tmp%_*}
 file=${vcfs}/${vcf}
 
-awk -v S_ID="$s_id" -v file="$file" 'BEGIN{print S_ID, file}' | sed 's/ /\t/g' >> ${run_id}_config_vcfs.tsv
+awk -v S_ID="$s_id" -v file="$file" 'BEGIN{print file, S_ID}' | sed 's/ /\t/g' >> ${run_id}_config_vcfs.tsv
 
 done
