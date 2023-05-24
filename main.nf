@@ -19,7 +19,7 @@ process NORMALIZE_VEPvcf {
 	script:
 
 	"""
-	bcftools norm -m-both ${file} > HaplotypeCaller_${sample}_VEP.ann.NORM.vcf
+	bcftools norm -m-snps ${file} > HaplotypeCaller_${sample}_VEP.ann.NORM.vcf
 	"""
 
 }
